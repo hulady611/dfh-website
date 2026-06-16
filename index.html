@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东方红航天生物 — 航天科技 · 引领健康未来</title>
+<meta name="description" content="北京东方红航天生物技术股份有限公司，隶属中国航天科技集团，承担中国航天生物技术应用和航天医学成果转化。国家863计划成果转化，航天员专用保健品研发单位。">
+<meta name="keywords" content="东方红航天生物,航天保健品,宇航口服液,东方红一号,中国航天,航天医学,中老年保健品,免疫力,骨密度">
+<link rel="icon" href="dongfanghong-logo.png">
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif;
+  color:#2e241f;background:#fefaf5;
+  line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:90px 0}
+
+/* ============ ACCENT / DIVIDER ============ */
+.accent-line{width:64px;height:3px;background:linear-gradient(90deg,#c8a96e,#8b6914);border-radius:2px;display:inline-block;margin-bottom:18px}
+.divider{width:80px;height:3px;background:#c8a96e;margin:0.8rem auto;border-radius:3px}
+
+/* ============ SECTION HEADERS ============ */
+.section-label{display:inline-block;font-size:13px;letter-spacing:5px;color:#c8a96e;text-transform:uppercase;margin-bottom:8px;font-weight:600}
+.section-title{font-size:34px;color:#1a1a2e;margin-bottom:12px;font-weight:700;letter-spacing:1px}
+.section-subtitle{font-size:16px;color:#888;margin-bottom:48px;max-width:600px;line-height:1.8}
+.text-center{text-align:center}
+.text-center .section-subtitle{margin-left:auto;margin-right:auto}
+
+/* ============ BADGE ============ */
+.badge-tag{display:inline-block;background:rgba(200,169,110,.12);border-radius:50px;font-size:12px;padding:4px 14px;color:#8b6914;letter-spacing:1px;font-weight:500}
+
+/* ============ NAVBAR ============ */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(10,22,40,0.96);backdrop-filter:blur(12px);
+  padding:0 32px;height:70px;display:flex;align-items:center;justify-content:space-between;
+  transition:box-shadow .3s;border-bottom:1px solid rgba(200,169,110,.15);
+}
+.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.3)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:#fff;letter-spacing:2px}
+.nav-logo img{height:40px;width:auto;border-radius:6px;object-fit:contain;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 0 0 1px rgba(200,169,110,.2),0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.05);padding:2px}
+.nav-logo:hover img{transform:scale(1.06);box-shadow:0 0 0 1.5px rgba(200,169,110,.4),0 4px 16px rgba(0,0,0,.3)}
+.nav-links{display:flex;gap:36px}
+.nav-links a{color:rgba(255,255,255,.78);font-size:14px;letter-spacing:1.5px;transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:#c8a96e;transition:width .3s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.menu-toggle span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  background:linear-gradient(160deg,#0a1628 0%,#122440 35%,#0a1628 100%);
+  position:relative;overflow:hidden;padding-top:70px;
+  border-radius:0 0 48px 48px;margin-bottom:-40px;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-15%;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,169,110,.12),transparent 70%);
+}
+.hero::after{
+  content:'';position:absolute;bottom:-30%;left:-10%;
+  width:350px;height:350px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,30,58,.1),transparent 70%);
+}
+/* Stars */
+.hero-stars{position:absolute;inset:0;
+  background-image:radial-gradient(1px 1px at 10% 20%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 30% 40%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 50% 15%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 65% 35%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 80% 25%,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 20% 60%,rgba(255,255,255,.45),transparent),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,.35),transparent),radial-gradient(1.5px 1.5px at 70% 65%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 88% 55%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 55% 80%,rgba(255,255,255,.3),transparent);}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(200,169,110,.4);color:#c8a96e;padding:6px 18px;border-radius:24px;font-size:13px;letter-spacing:3px;margin-bottom:24px}
+.hero-tag::before{content:'';width:7px;height:7px;background:#c8a96e;border-radius:50%}
+.hero h1{font-size:52px;color:#fff;line-height:1.22;margin-bottom:18px;font-weight:700}
+.hero h1 span{background:linear-gradient(135deg,#c8a96e,#e8c97a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{font-size:17px;color:rgba(255,255,255,.6);margin-bottom:36px;line-height:1.9}
+.hero-btns{display:flex;gap:16px}
+.btn-gold{display:inline-block;background:linear-gradient(135deg,#c8a96e,#b8943e);color:#0a1628;padding:15px 42px;border-radius:36px;font-size:16px;font-weight:700;letter-spacing:2px;transition:all .3s;border:none;cursor:pointer}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(200,169,110,.35)}
+.btn-outline{display:inline-block;border:2px solid rgba(255,255,255,.35);color:#fff;padding:15px 36px;border-radius:36px;font-size:16px;font-weight:600;letter-spacing:2px;transition:all .3s}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.btn-dark{display:inline-block;background:#1a1a2e;color:#fff;padding:14px 36px;border-radius:36px;font-size:15px;font-weight:600;letter-spacing:1px;transition:all .3s}
+.btn-dark:hover{background:#2a2a4e;transform:translateY(-2px)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-emblem{width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,.1),transparent 70%);border:2px solid rgba(200,169,110,.25);display:flex;align-items:center;justify-content:center;position:relative;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+.hero-emblem-inner{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,rgba(200,169,110,.2),rgba(200,169,110,.05));display:flex;align-items:center;justify-content:center}
+.hero-emblem-inner svg{width:70px;height:70px}
+.hero-emblem::before{content:'';position:absolute;width:380px;height:120px;border:1px solid rgba(200,169,110,.08);border-radius:50%;transform:rotate(-15deg)}
+
+/* ============ AUTHORITY BAR ============ */
+.authority-bar{background:#fff;border-bottom:1px solid #f0ebe0;padding:20px 0;text-align:center}
+.authority-logos{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
+.al-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#666;font-weight:500}
+.al-dot{width:8px;height:8px;background:#c8a96e;border-radius:50%;flex-shrink:0}
+
+/* ============ CARD BASE ============ */
+.card{background:#fff;border-radius:24px;box-shadow:0 8px 28px rgba(0,0,0,.05);overflow:hidden;margin-bottom:2rem;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.08)}
+
+/* ============ ABOUT ============ */
+.about-grid{display:flex;flex-wrap:wrap;gap:2.5rem;align-items:center}
+.about-text{flex:1.2;padding:1rem}
+.about-text h2{font-size:1.9rem;color:#1a1a2e;margin-bottom:1rem;border-left:5px solid #c8a96e;padding-left:1rem}
+.about-text p{margin-bottom:1rem;color:#3e2c21;font-size:1.05rem;line-height:1.9}
+.about-image{flex:0.9;text-align:center;background:linear-gradient(135deg,#fefaf5,#fcf6ed);border-radius:28px;padding:1.5rem}
+.about-image svg{max-width:100%;border-radius:20px;display:block;margin:0 auto}
+
+/* Feature list from reference */
+.feature-list{list-style:none;margin-top:1.2rem}
+.feature-list li{margin-bottom:.7rem;display:flex;align-items:center;gap:.6rem;font-size:15px;color:#555}
+.feature-list li::before{content:"";display:inline-block;width:8px;height:8px;background:#c8a96e;border-radius:50%;flex-shrink:0}
+
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:2rem}
+.stat-card{background:linear-gradient(135deg,#fefaf5,#faf6ef);border-radius:16px;padding:24px 18px;text-align:center;border:1px solid rgba(200,169,110,.15);transition:all .3s}
+.stat-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.stat-num{font-size:38px;font-weight:800;color:#1a1a2e;line-height:1.1}
+.stat-num span{color:#c8a96e}
+.stat-label{font-size:13px;color:#999;margin-top:6px}
+
+/* Timeline */
+.timeline{position:relative;padding-left:28px;border-left:2px solid rgba(200,169,110,.2)}
+.tl-item{position:relative;margin-bottom:18px;padding-left:16px}
+.tl-item::before{content:'';position:absolute;left:-35px;top:6px;width:12px;height:12px;background:#c8a96e;border-radius:50%;border:3px solid #fefaf5;box-shadow:0 0 0 2px #c8a96e;z-index:1}
+.tl-year{font-size:13px;color:#c8a96e;font-weight:700;letter-spacing:2px}
+.tl-text{font-size:14px;color:#666;margin-top:2px}
+
+/* ============ TECH SECTION ============ */
+.tech-section{background:#0a1628;color:#fff;position:relative;overflow:hidden;border-radius:48px 48px 0 0}
+.tech-section::before{content:'';position:absolute;inset:0;opacity:.05;background:radial-gradient(circle at 30% 50%,#c8a96e,transparent 50%)}
+.tech-section .section-title{color:#fff}
+.tech-section .section-subtitle{color:rgba(255,255,255,.55)}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1}
+.tech-card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:30px 20px;text-align:center;transition:all .3s}
+.tech-card:hover{background:rgba(255,255,255,.07);border-color:rgba(200,169,110,.25);transform:translateY(-3px)}
+.tech-card .tc-icon{width:50px;height:50px;border-radius:50%;background:rgba(200,169,110,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px}
+.tech-card h4{font-size:16px;color:#fff;margin-bottom:6px;letter-spacing:1px}
+.tech-card p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* Patents */
+.patents-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1;margin-top:40px}
+.patent-card{background:rgba(255,255,255,.05);border-radius:14px;padding:24px 16px;text-align:center;transition:all .3s}
+.patent-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.patent-card .pt-icon{font-size:30px;margin-bottom:8px}
+.patent-card h4{font-size:15px;color:#fff;margin-bottom:4px}
+.patent-card p{font-size:12px;color:rgba(255,255,255,.45)}
+
+/* ============ GALLERY (from reference) ============ */
+.gallery-title{font-size:1.8rem;text-align:center;margin:2rem 0 1rem;color:#1a1a2e}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin:2rem 0}
+.product-item{background:#fff;border-radius:24px;overflow:hidden;text-align:center;padding:1.4rem 1rem 1.8rem;transition:all .25s;box-shadow:0 4px 16px rgba(0,0,0,.04);border:1px solid #f3e8d8}
+.product-item:hover{border-color:rgba(200,169,110,.3);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.product-item .pi-visual{background:#fff;border-radius:16px;padding:16px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;min-height:190px}
+.product-item .pi-visual img{width:auto;height:160px;object-fit:contain;border-radius:10px;transition:transform .35s ease}
+.product-item:hover .pi-visual img{transform:scale(1.06)}
+.product-item .pi-visual svg{width:80px;height:80px;opacity:.75}
+.product-item h4{font-size:1.2rem;color:#1a1a2e;margin:.4rem 0}
+.product-item p{font-size:.88rem;color:#888;padding:0 .5rem;line-height:1.7}
+.product-item .pi-tag{display:inline-block;background:rgba(200,169,110,.12);border-radius:50px;font-size:11px;padding:3px 12px;color:#8b6914;letter-spacing:1px;margin-bottom:8px}
+.product-item .pi-ingredients{font-size:12px;color:#bbb;margin-top:8px;line-height:1.6}
+
+/* ============ STAR PRODUCT (from reference about-grid) ============ */
+.star-section{background:#fff}
+.star-grid{display:flex;flex-wrap:wrap;gap:2.5rem;align-items:center}
+.star-text{flex:1.2;padding:1rem}
+.star-text h2{font-size:1.9rem;color:#1a1a2e;margin-bottom:1rem;border-left:5px solid #c8a96e;padding-left:1rem}
+.star-text .feature-list li{font-size:16px;padding:6px 0}
+.star-visual{flex:0.9;text-align:center;background:linear-gradient(135deg,#0a1628,#122440);border-radius:28px;padding:2.5rem 2rem;color:#fff;position:relative;overflow:hidden}
+.star-visual::before{content:'';position:absolute;inset:0;opacity:.06;background:radial-gradient(ellipse at center,rgba(200,169,110,.6),transparent 70%)}
+.star-visual img{width:100%;max-width:340px;height:auto;object-fit:contain;position:relative;z-index:1;transition:transform .4s ease;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3))}
+.star-visual:hover img{transform:scale(1.04)}
+.star-visual-inner{display:none}
+.star-visual-inner h3{font-size:24px;color:#fff;margin-bottom:8px}
+.star-visual-inner .sv-tag{display:inline-block;background:rgba(200,169,110,.15);color:#c8a96e;padding:6px 18px;border-radius:20px;font-size:12px;letter-spacing:2px;margin-bottom:14px;border:1px solid rgba(200,169,110,.2)}
+.star-visual-inner .sv-features{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;margin-top:16px}
+.star-visual-inner .sv-features span{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.7)}
+.star-visual-inner .sv-features span::before{content:'';width:5px;height:5px;background:#c8a96e;border-radius:50%;flex-shrink:0}
+
+/* ============ AUDIENCE ============ */
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.audience-card{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.035);transition:all .3s;border:1px solid #f3e8d8}
+.audience-card:hover{transform:translateY(-4px);border-color:rgba(200,169,110,.3);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.audience-card .ac-icon{font-size:44px;margin-bottom:14px}
+.audience-card h4{font-size:18px;color:#1a1a2e;margin-bottom:8px}
+.audience-card p{font-size:14px;color:#888;line-height:1.8}
+
+/* ============ TESTIMONIALS ============ */
+.testimonials{background:#fff;border-radius:48px}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.t-card{background:#fefaf5;border-radius:20px;padding:32px 24px;position:relative;transition:all .3s}
+.t-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.t-card::before{content:'"';font-size:60px;color:rgba(200,169,110,.3);line-height:1;position:absolute;top:16px;left:20px;font-family:Georgia,serif}
+.t-card .stars{color:#c8a96e;font-size:15px;letter-spacing:2px;margin-bottom:12px}
+.t-card .text{font-size:14px;color:#666;line-height:2;margin-bottom:18px;text-indent:1em}
+.t-card .t-user{display:flex;align-items:center;gap:10px;border-top:1px solid #efe8d8;padding-top:14px}
+.t-card .t-avatar{width:36px;height:36px;border-radius:50%;background:rgba(200,169,110,.15);display:flex;align-items:center;justify-content:center;font-size:14px;color:#8b6914;font-weight:600}
+.t-card .t-name{font-size:14px;color:#1a1a2e;font-weight:600}
+.t-card .t-info{font-size:11px;color:#bbb}
+
+/* ============ DIGITAL HEALTH ============ */
+.digital{background:linear-gradient(135deg,#0a1628,#122440);color:#fff;border-radius:48px 48px 0 0;position:relative;overflow:hidden}
+.digital::before{content:'';position:absolute;inset:0;opacity:.04;background:radial-gradient(circle at 50% 50%,#c8a96e,transparent 60%)}
+.digital .section-title{color:#fff}
+.digital .section-subtitle{color:rgba(255,255,255,.55)}
+.dh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+.dh-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px 22px;text-align:center;transition:all .3s}
+.dh-card:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.dh-card .dh-icon{font-size:36px;margin-bottom:12px}
+.dh-card h4{font-size:17px;color:#fff;margin-bottom:6px}
+.dh-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* ============ CONTACT (from reference) ============ */
+.contact-section{background:linear-gradient(120deg,#fef4e8,#fffaf2,#fefaf5);border-radius:40px;padding:3rem 2rem;margin:2rem 0;text-align:center;border:1px solid #eedbc8}
+.contact-section h3{font-size:1.8rem;color:#1a1a2e;margin-bottom:.4rem}
+.contact-details{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1.6rem 0}
+.contact-card{background:#fff;padding:.8rem 1.6rem;border-radius:60px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 3px 12px rgba(0,0,0,.04);font-size:1rem;font-weight:500;color:#3e2c21;transition:all .25s;border:1px solid #f0e8d8}
+.contact-card:hover{background:#faf5ec;transform:scale(1.02)}
+.contact-icon{font-size:1.3rem}
+.contact-card a{text-decoration:none;color:#8b6914;font-weight:600}
+.contact-qr-box{display:inline-block;background:#fff;padding:2.5rem 3rem;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,.05);margin-top:1.2rem}
+.contact-qr-box svg{width:150px;height:150px}
+.contact-qr-box p{margin-top:12px;color:#888;font-size:14px}
+
+/* ============ FOOTER ============ */
+.footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0;text-align:center;font-size:13px;margin-top:3rem}
+.footer .fbrand{color:#c8a96e;font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:3px}
+.footer p{margin:4px 0}
+
+/* ============ ANIMATIONS ============ */
+.animate{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.animate.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .hero .container{grid-template-columns:1fr;text-align:center}
+  .hero-visual{order:-1}.hero-emblem{width:220px;height:220px}.hero-emblem-inner{width:100px;height:100px}.hero-emblem-inner svg{width:48px;height:48px}
+  .hero h1{font-size:36px}.hero-btns{justify-content:center}.hero-emblem::before{display:none}
+  .about-grid{flex-direction:column}.star-grid{flex-direction:column}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}.patents-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}
+  .t-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .section{padding:56px 0}.section-title{font-size:26px}.hero h1{font-size:28px}.hero-desc{font-size:15px}
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(10,22,40,.98);flex-direction:column;padding:20px;gap:14px}
+  .nav-links.open{display:flex}.menu-toggle{display:flex}
+  .tech-grid{grid-template-columns:1fr}.patents-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.t-grid{grid-template-columns:1fr}
+  .audience-grid{grid-template-columns:1fr}.dh-grid{grid-template-columns:1fr}
+  .contact-details{flex-direction:column;align-items:center}.contact-card{width:90%;justify-content:center}
+  .btn-gold,.btn-outline,.btn-dark{padding:13px 28px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="dongfanghong-logo.png" alt="东方红航天生物">
+    东方红
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" class="active">首页</a></li>
+    <li><a href="#about">公司背景</a></li>
+    <li><a href="#tech">核心技术</a></li>
+    <li><a href="#products">航天产品</a></li>
+    <li><a href="#star">明星单品</a></li>
+    <li><a href="#contact">联系我们</a></li>
+  </ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-stars"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-tag">中国航天科技集团核心民品企业</span>
+      <h1>航天科技<br><span>引领健康未来</span></h1>
+      <p class="hero-desc">北京东方红航天生物技术股份有限公司<br>承担中国航天生物技术应用和航天医学成果转化<br>国家「863」计划空间生命科学重大成果产业化单位</p>
+      <div class="hero-btns">
+        <a href="#star" class="btn-gold">探索核心产品</a>
+        <a href="#about" class="btn-outline">了解公司背景</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-emblem">
+        <div class="hero-emblem-inner">
+          <svg viewBox="0 0 70 70" fill="none">
+            <circle cx="35" cy="35" r="32" stroke="#c8a96e" stroke-width="1.5"/>
+            <ellipse cx="35" cy="35" rx="28" ry="10" stroke="rgba(200,169,110,.35)" stroke-width="1" transform="rotate(-20 35 35)"/>
+            <circle cx="35" cy="35" r="6" fill="#c8a96e" opacity=".85"/>
+            <circle cx="35" cy="20" r="2" fill="rgba(255,255,255,.4)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTHORITY BAR ============ -->
+<div class="authority-bar">
+  <div class="authority-logos">
+    <div class="al-item"><span class="al-dot"></span>中国航天科技集团</div>
+    <div class="al-item"><span class="al-dot"></span>中国空间技术研究院</div>
+    <div class="al-item"><span class="al-dot"></span>世界500强第343位</div>
+    <div class="al-item"><span class="al-dot"></span>国家863计划成果</div>
+    <div class="al-item"><span class="al-dot"></span>华润集团战略注资8亿</div>
+  </div>
+</div>
+
+<!-- ============ ABOUT / COMPANY BACKGROUND ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="card" style="padding:2rem;">
+      <div class="about-grid">
+        <div class="about-text animate">
+          <span class="section-label">AUTHORITY</span>
+          <h2>与国家战略同频</h2>
+          <div class="accent-line" style="margin-bottom:16px"></div>
+          <p>北京东方红航天生物技术股份有限公司成立于<strong>1997年9月</strong>，是<strong>中国航天科技集团公司</strong>（中央直接管理的国有特大型高科技企业、世界500强第343位）的主要民品企业之一，也是<strong>中国空间技术研究院</strong>的核心企业。</p>
+          <p>中国空间技术研究院于1968年经毛主席批准成立，<strong>钱学森先生任首任院长</strong>，先后承担「两弹一星」「东方红一号卫星」「嫦娥探月」「神舟号系列飞船」等国家重大航天工程。</p>
+          <p>东方红公司承担着<strong>中国航天生物技术应用和航天医学成果转化</strong>的核心使命，将航天科技成果造福于民，与国家「健康中国」战略不谋而合。</p>
+          <ul class="feature-list">
+            <li>隶属中国航天科技集团，国有控股航天民用企业</li>
+            <li>中国空间技术研究院核心企业，钱学森精神传承</li>
+            <li>2018年华润集团战略注资8亿元，助力航天生物产业</li>
+            <li>2010年代表中国航天入驻上海世博会太空家园馆</li>
+          </ul>
+        </div>
+        <div class="about-image animate d1">
+          <svg viewBox="0 0 280 240" fill="none">
+            <rect width="280" height="240" rx="20" fill="rgba(10,22,40,.03)"/>
+            <circle cx="140" cy="100" r="70" stroke="rgba(200,169,110,.25)" stroke-width="2" fill="none"/>
+            <circle cx="140" cy="100" r="40" stroke="rgba(200,169,110,.15)" stroke-width="1.5" fill="none"/>
+            <circle cx="140" cy="100" r="12" fill="rgba(200,169,110,.4)"/>
+            <ellipse cx="140" cy="60" rx="50" ry="10" stroke="rgba(200,169,110,.15)" stroke-width="1" transform="rotate(-15 140 60)"/>
+            <text x="140" y="210" text-anchor="middle" fill="#c8a96e" font-size="14" letter-spacing="3">✦ 中国航天 · 健康中国 ✦</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid animate d2">
+        <div class="stat-card"><div class="stat-num"><span>1997</span></div><div class="stat-label">年正式成立</div></div>
+        <div class="stat-card"><div class="stat-num">27<span>+</span></div><div class="stat-label">年深耕航天生物技术</div></div>
+        <div class="stat-card"><div class="stat-num">8<span>次</span></div><div class="stat-label">太空搭载诱变育种</div></div>
+        <div class="stat-card"><div class="stat-num">4<span>项</span></div><div class="stat-label">国家发明专利认证</div></div>
+      </div>
+
+      <!-- Timeline -->
+      <div style="margin-top:2.5rem" class="animate d3">
+        <h3 style="font-size:18px;color:#1a1a2e;margin-bottom:20px;border-left:4px solid #c8a96e;padding-left:12px">发展历程</h3>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-year">1992</span><p class="tl-text">中国载人航天工程正式启动</p></div>
+          <div class="tl-item"><span class="tl-year">1995</span><p class="tl-text">863-2课题立项，「东方红一号」菌株首次太空搭载</p></div>
+          <div class="tl-item"><span class="tl-year">1997</span><p class="tl-text">北京东方红航天生物技术股份有限公司正式成立</p></div>
+          <div class="tl-item"><span class="tl-year">2000</span><p class="tl-text">「东方红一号」口服液研制成功</p></div>
+          <div class="tl-item"><span class="tl-year">2010</span><p class="tl-text">代表中国航天入驻上海世博会太空家园馆</p></div>
+          <div class="tl-item"><span class="tl-year">2018</span><p class="tl-text">华润集团战略注资8亿元，助力空间生物实验平台</p></div>
+          <div class="tl-item"><span class="tl-year">2020</span><p class="tl-text">航e生活平台上线，开启数字化主动健康管理</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE TECHNOLOGY ============ -->
+<section class="section tech-section" id="tech">
+  <div class="container" style="padding-top:80px;padding-bottom:80px">
+    <div class="text-center">
+      <span class="section-label">TECHNOLOGY</span>
+      <h2 class="section-title">航天核心科技 · 国家科研平台</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">依托中国航天独一无二的太空资源与国家级科研力量</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card animate"><div class="tc-icon">🛰️</div><h4>空间生物技术</h4><p>微重力、高真空、高能粒子辐射等太空环境诱导菌种基因变异，筛选优良菌种</p></div>
+      <div class="tech-card animate d1"><div class="tc-icon">🧬</div><h4>航天医学转化</h4><p>与中国航天员科研训练中心深度合作，将航天员健康保障体系转化为民用产品</p></div>
+      <div class="tech-card animate d2"><div class="tc-icon">🔬</div><h4>国家级研发平台</h4><p>联合钱学森空间技术实验室、航天东方红抗衰老研究中心等顶级科研机构</p></div>
+      <div class="tech-card animate d3"><div class="tc-icon">👨‍🔬</div><h4>顶尖专家团队</h4><p>汇集航天医学、生物工程、营养学等国内一流专家，多项自主知识产权专利</p></div>
+    </div>
+    <!-- Patents -->
+    <div class="patents-grid">
+      <div class="patent-card animate"><div class="pt-icon">🩸</div><h4>降低血糖专利</h4><p>ZL200810225540.X</p></div>
+      <div class="patent-card animate d1"><div class="pt-icon">🫀</div><h4>降低血压专利</h4><p>ZL200810215542.5</p></div>
+      <div class="patent-card animate d2"><div class="pt-icon">🛡️</div><h4>增强免疫力专利</h4><p>ZL201510098281.3</p></div>
+      <div class="patent-card animate d3"><div class="pt-icon">🦴</div><h4>航天员复合钙专利</h4><p>ZL200510123442.6</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT GALLERY (from reference style) ============ -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">PRODUCT LINE</span>
+      <h2 class="section-title">航天医学民用转化系列成果</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">基于空间骨保护、调脂调压、抗衰老等航天医学成果<br>专为中老年体质打造的精准营养方案</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="product-item animate">
+        <div class="pi-visual">
+          <img src="product-1.png" alt="胶原氨糖软骨素钙片">
+        </div>
+        <h4>胶原氨糖软骨素钙片</h4>
+        <span class="pi-tag">航天员用复合钙制剂专利转化</span>
+        <p>全营养型骨保护剂，增强骨密度、改善关节功能</p>
+        <p class="pi-ingredients">水解胶原蛋白 · D-氨基葡萄糖 · 硫酸软骨素 · 柠檬酸钙</p>
+      </div>
+      <div class="product-item animate d1">
+        <div class="pi-visual">
+          <img src="product-2.png" alt="天曲益压康片">
+        </div>
+        <h4>天曲益压康片</h4>
+        <span class="pi-tag">航天搭载红曲 · 调压专利</span>
+        <p>调节血压，改善心脑血管微循环</p>
+        <p class="pi-ingredients">航天搭载红曲 · 罗布麻提取物 · 野菊花提取物 · 珍珠母粉</p>
+      </div>
+      <div class="product-item animate d2">
+        <div class="pi-visual">
+          <img src="product-3.png" alt="天曲糖定康片">
+        </div>
+        <h4>天曲糖定康片</h4>
+        <span class="pi-tag">航天搭载红曲 · 调糖专利</span>
+        <p>辅助调节血糖，促进糖代谢平衡</p>
+        <p class="pi-ingredients">航天搭载红曲 · 西洋参 · 蜂胶 · 吡啶甲酸铬</p>
+      </div>
+      <div class="product-item animate">
+        <div class="pi-visual">
+          <img src="product-4.png" alt="航研牌辅酶Q₁₀胶囊">
+        </div>
+        <h4>航研牌辅酶Q₁₀胶囊</h4>
+        <span class="pi-tag">空间诱变菌种 · 高纯度发酵</span>
+        <p>高效能、高纯度辅酶Q10，保护心脏，抗氧化</p>
+        <p class="pi-ingredients">空间搭载菌种联合ARTP诱变技术 · 创新制粒工艺</p>
+      </div>
+      <div class="product-item animate d1">
+        <div class="pi-visual">
+          <img src="product-5.png" alt="鱼蛋白粉固体饮料">
+        </div>
+        <h4>鱼蛋白粉固体饮料</h4>
+        <span class="pi-tag">多国专利 · 海洋低聚肽</span>
+        <p>降解乳酸及尿酸，抗疲劳抗发炎，分子量仅200道尔顿</p>
+        <p class="pi-ingredients">纯天然鲣鱼/鲔鱼低聚肽 · 每1g提取自2000g生鲜鲣鱼</p>
+      </div>
+      <div class="product-item animate d2">
+        <div class="pi-visual">
+          <img src="product-6.png" alt="雪莲培养物抗衰老系列">
+        </div>
+        <h4>雪莲培养物抗衰老系列</h4>
+        <span class="pi-tag">航天抗衰老研究中心出品</span>
+        <p>五抗：抗氧化·抗衰老·抗肿瘤·抗炎症·抗疲劳</p>
+        <p class="pi-ingredients">雪莲培养物 · 红酒粉 · 蛹虫草 · 雨生红球藻</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAR PRODUCT ============ -->
+<section class="section star-section" id="star">
+  <div class="container">
+    <div class="card" style="padding:2rem;">
+      <div class="star-grid">
+        <div class="star-visual animate">
+          <img src="product-7.png" alt="东方红一号黄芪香薷酵母口服液">
+          <div class="star-visual-inner">
+            <span class="sv-tag">✧ 8次太空搭载 ✧</span>
+            <h3>东方红一号<br>黄芪香薷酵母口服液</h3>
+            <p style="color:rgba(255,255,255,.55);font-size:14px;margin-bottom:12px">原「宇航口服液」· 航天员专属营养保障</p>
+            <div class="sv-features">
+              <span>3000+种活性酶与辅酶</span><span>航天生物技术制备</span>
+              <span>国家发明专利认证</span><span>863计划重大成果</span>
+              <span>全面调节机体功能</span><span>适合长期温和调养</span>
+            </div>
+          </div>
+        </div>
+        <div class="star-text animate d1">
+          <span class="section-label">STAR PRODUCT</span>
+          <h2>国家863计划<br>空间生命科学重大成果</h2>
+          <div class="accent-line" style="margin-bottom:16px"></div>
+          <p>「东方红一号」口服液含有<strong>3000多种酶和辅酶</strong>，能够极大地活化细胞代谢，调节全身机能。酶是人体内所有细胞生命活动的催化剂，支配着新陈代谢、营养与能量转换等多个催化过程。人体内酶的储存量越大、越完整，人就越健康、长寿。</p>
+          <ul class="feature-list">
+            <li><strong>增强免疫</strong>，调节免疫平衡</li>
+            <li><strong>改善胃肠功能</strong>，调节肠道菌群</li>
+            <li><strong>阻止骨钙流失</strong>，增加骨密度</li>
+            <li><strong>改善睡眠</strong>，提升睡眠品质</li>
+            <li><strong>提高细胞代谢</strong>，促进废物排出</li>
+            <li><strong>促进细胞更新</strong>，维持器官年轻化</li>
+            <li><strong>净化血液</strong>，中和与排除体内毒素</li>
+            <li><strong>减轻放化疗副作用</strong>，提升生存质量</li>
+            <li><strong>恢复体力</strong>，增强体质，抗疲劳</li>
+          </ul>
+          <a href="#contact" class="btn-gold" style="margin-top:18px;display:inline-block">咨询产品详情</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TARGET AUDIENCE ============ -->
+<section class="section" style="background:#fefaf5">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">FOR WHOM</span>
+      <h2 class="section-title">中老年群体的航天健康守护</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">源自航天医学研究的精准营养方案</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card animate">
+        <div class="ac-icon">🛡️</div>
+        <h4>免疫力低下 · 易疲劳</h4>
+        <p>经常感冒、身体虚弱、恢复缓慢的中老年人，含3000+种活性酶全面调节免疫</p>
+      </div>
+      <div class="audience-card animate d1">
+        <div class="ac-icon">🦴</div>
+        <h4>骨骼关节退化</h4>
+        <p>骨密度下降、关节疼痛、腰背酸痛的35+人群，航天员复合钙专利产品精准补钙</p>
+      </div>
+      <div class="audience-card animate d2">
+        <div class="ac-icon">🫀</div>
+        <h4>三高及代谢问题</h4>
+        <p>血糖、血压、血脂偏高人群，国家发明专利产品辅助调理代谢平衡</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">TESTIMONIALS</span>
+      <h2 class="section-title">用户真实反馈</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">航天品质 · 口碑相传</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card animate">
+        <div class="stars">★★★★★</div>
+        <p class="text">老伴三年前开始吃东方红一号口服液，以前每年秋冬必然感冒发烧，这两年一次都没犯过。精神状态明显好了，带孙子出去玩也不喊累。航天员吃的东西，我们老百姓也能享受到。</p>
+        <div class="t-user"><div class="t-avatar">陈</div><div><div class="t-name">陈阿姨</div><div class="t-info">67岁 · 退休干部 · 服用3年</div></div></div>
+      </div>
+      <div class="t-card animate d1">
+        <div class="stars">★★★★★</div>
+        <p class="text">骨质疏松好多年了，上楼下楼膝盖疼得不行。女儿在航天系统工作推荐了这个钙片，说是航天员的钙。吃了大半年膝盖真的不疼了，上周还跟老姐妹去爬山了。</p>
+        <div class="t-user"><div class="t-avatar">刘</div><div><div class="t-name">刘叔叔</div><div class="t-info">72岁 · 退休工程师 · 服用8个月</div></div></div>
+      </div>
+      <div class="t-card animate d2">
+        <div class="stars">★★★★★</div>
+        <p class="text">血糖一直偏高，朋友推荐了糖定康片，说是航天搭载红曲做的有发明专利。配合饮食控制吃了四个月，血糖真的稳定了不少，体检报告比去年好看多了。</p>
+        <div class="t-user"><div class="t-avatar">张</div><div><div class="t-name">张叔叔</div><div class="t-info">58岁 · 企业主管 · 服用4个月</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIGITAL HEALTH ============ -->
+<section class="section digital">
+  <div class="container" style="padding-top:80px;padding-bottom:80px">
+    <div class="text-center">
+      <span class="section-label">DIGITAL HEALTH</span>
+      <h2 class="section-title">AI数智主动健康管理平台</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">国家工信部科学技术成果认证 · 国内先进水平</p>
+    </div>
+    <div class="dh-grid">
+      <div class="dh-card animate"><div class="dh-icon">🔬</div><h4>智能检测评估</h4><p>自主研发AI健康报告，覆盖循环、消化、呼吸、内分泌系统，提供动态评估</p></div>
+      <div class="dh-card animate d1"><div class="dh-icon">📋</div><h4>精准健康方案</h4><p>膳食营养+运动指导+理疗调节+功能性食品，个性化主动健康解决方案</p></div>
+      <div class="dh-card animate d2"><div class="dh-icon">🏥</div><h4>线上线下融合</h4><p>线上互联网医院+线下主动健康中心，全方位健康服务体系</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT (from reference style) ============ -->
+<section id="contact">
+<div class="container">
+<div class="contact-section animate">
+  <h3>联系东方红 · 健康顾问</h3>
+  <div class="divider"></div>
+  <p style="margin-bottom:.8rem;color:#888">产品咨询 | 经销合作 | 健康指导 | 售后支持</p>
+  <div class="contact-details">
+    <div class="contact-card">
+      <span class="contact-icon">📞</span>
+      <span>咨询热线：<a href="tel:13973669373">13973669373</a></span>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">✉️</span>
+      <span>电子邮箱：<a href="mailto:1940045503@qq.com">1940045503@qq.com</a></span>
+    </div>
+  </div>
+  <div class="contact-details">
+    <div class="contact-card">
+      <span class="contact-icon">📍</span>
+      <span>总部地址：北京市朝阳区东方红健康产业园B座</span>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">⏰</span>
+      <span>服务时间：周一至周日 9:00 – 21:00</span>
+    </div>
+  </div>
+  <div class="contact-qr-box">
+    <img src="qrcode.png" alt="微信二维码" style="width:150px;height:150px;border-radius:12px;display:block;margin:0 auto">
+    <p>微信扫一扫 · 添加健康顾问<br>获取专属航天健康方案</p>
+  </div>
+  <p style="margin-top:1rem;font-size:.85rem;color:#bbb;">🌟 添加企业微信即送「航天东方红试用装」一份（限新客）🌟</p>
+</div>
+</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="fbrand">东方红航天生物</div>
+  <p>航天科技 · 引领健康未来</p>
+  <p style="margin-top:10px">© 2026 北京东方红航天生物技术股份有限公司 版权所有</p>
+  <p style="color:rgba(255,255,255,.25);margin-top:4px">本页面内容仅供参考，不构成医疗建议。保健食品不是药物，不能代替药物治疗疾病。</p>
+</footer>
+
+<script>
+(function(){
+  var nb=document.getElementById('navbar'),tick=false;
+  window.addEventListener('scroll',function(){if(!tick){requestAnimationFrame(function(){nb.classList.toggle('scrolled',window.pageYOffset>50);tick=false});tick=true}});
+  var mt=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
+  mt.addEventListener('click',function(){var o=nl.classList.toggle('open');mt.setAttribute('aria-expanded',o?'true':'false')});
+  nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+  var secs=document.querySelectorAll('section[id]'),nas=document.querySelectorAll('.nav-links a'),st=false;
+  window.addEventListener('scroll',function(){if(!st){requestAnimationFrame(function(){var sy=window.pageYOffset||document.documentElement.scrollTop,cur='';secs.forEach(function(s){if(sy>=s.offsetTop-100)cur=s.getAttribute('id')});nas.forEach(function(a){a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active')});st=false});st=true}});
+  if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.animate').forEach(function(el){obs.observe(el)})}else{document.querySelectorAll('.animate').forEach(function(el){el.classList.add('visible')})}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var href=this.getAttribute('href');if(href==='#'||href==='')return;var t=document.querySelector(href);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+})();
+</script>
+</body>
+</html>
