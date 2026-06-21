@@ -70,7 +70,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
   width:350px;height:350px;border-radius:50%;
   background:radial-gradient(circle,rgba(196,30,58,.1),transparent 70%);
 }
-/* Stars */
 .hero-stars{position:absolute;inset:0;
   background-image:radial-gradient(1px 1px at 10% 20%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 30% 40%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 50% 15%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 65% 35%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 80% 25%,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 20% 60%,rgba(255,255,255,.45),transparent),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,.35),transparent),radial-gradient(1.5px 1.5px at 70% 65%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 88% 55%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 55% 80%,rgba(255,255,255,.3),transparent);}
 .hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
@@ -111,7 +110,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .about-image{flex:0.9;text-align:center;background:linear-gradient(135deg,#fefaf5,#fcf6ed);border-radius:28px;padding:1.5rem}
 .about-image svg{max-width:100%;border-radius:20px;display:block;margin:0 auto}
 
-/* Feature list from reference */
 .feature-list{list-style:none;margin-top:1.2rem}
 .feature-list li{margin-bottom:.7rem;display:flex;align-items:center;gap:.6rem;font-size:15px;color:#555}
 .feature-list li::before{content:"";display:inline-block;width:8px;height:8px;background:#c8a96e;border-radius:50%;flex-shrink:0}
@@ -143,7 +141,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .tech-card h4{font-size:16px;color:#fff;margin-bottom:6px;letter-spacing:1px}
 .tech-card p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.7}
 
-/* Patents */
 .patents-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1;margin-top:40px}
 .patent-card{background:rgba(255,255,255,.05);border-radius:14px;padding:24px 16px;text-align:center;transition:all .3s}
 .patent-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
@@ -151,10 +148,45 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .patent-card h4{font-size:15px;color:#fff;margin-bottom:4px}
 .patent-card p{font-size:12px;color:rgba(255,255,255,.45)}
 
-/* ============ GALLERY (from reference) ============ */
+/* ============ SEVEN RESEARCH INSTITUTES (七大研究院) ============ */
+.institutes-section{margin-top:60px;position:relative;z-index:1}
+.institutes-section .is-title{font-size:24px;color:#fff;text-align:center;margin-bottom:8px;letter-spacing:2px;font-weight:700}
+.institutes-section .is-subtitle{font-size:13px;color:rgba(255,255,255,.45);text-align:center;margin-bottom:36px;line-height:1.7;max-width:700px;margin-left:auto;margin-right:auto}
+.institutes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.institute-card{
+  background:linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(200,169,110,.2);border-radius:20px;
+  padding:28px 20px;text-align:center;transition:all .4s cubic-bezier(.25,.46,.45,.94);
+  cursor:pointer;text-decoration:none;display:block;position:relative;overflow:hidden;
+}
+.institute-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--ac-top, linear-gradient(90deg,#c8a96e,#e8c97a));
+  border-radius:20px 20px 0 0;
+}
+.institute-card::after{
+  content:'';position:absolute;top:-40%;right:-30%;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle, var(--ac-glow, rgba(200,169,110,.08)), transparent 70%);
+  transition:all .4s;
+}
+.institute-card:hover::after{transform:scale(1.5);opacity:.6}
+.institute-card:hover{background:linear-gradient(160deg, rgba(255,255,255,.1), rgba(255,255,255,.04));border-color:rgba(200,169,110,.45);transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.25), 0 0 30px var(--ac-shadow, rgba(200,169,110,.06))}
+.institute-card .ic-visual{
+  height:100px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;overflow:hidden;position:relative;background:var(--ic-bg);
+}
+.institute-card .ic-visual svg{width:52px;height:52px}
+.institute-card h4{font-size:14.5px;color:#fff;margin-bottom:8px;line-height:1.5;font-weight:600;letter-spacing:.5px}
+.institute-card p{font-size:11.5px;color:rgba(255,255,255,.48);line-height:1.75}
+
+/* ============ GALLERY (Clickable Product Cards) ============ */
 .gallery-title{font-size:1.8rem;text-align:center;margin:2rem 0 1rem;color:#1a1a2e}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin:2rem 0}
-.product-item{background:#fff;border-radius:24px;overflow:hidden;text-align:center;padding:1.4rem 1rem 1.8rem;transition:all .25s;box-shadow:0 4px 16px rgba(0,0,0,.04);border:1px solid #f3e8d8}
+.product-item{
+  background:#fff;border-radius:24px;overflow:hidden;text-align:center;padding:1.4rem 1rem 1.8rem;
+  transition:all .25s;box-shadow:0 4px 16px rgba(0,0,0,.04);border:1px solid #f3e8d8;
+  cursor:pointer;position:relative;
+}
 .product-item:hover{border-color:rgba(200,169,110,.3);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
 .product-item .pi-visual{background:#fff;border-radius:16px;padding:16px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;min-height:190px}
 .product-item .pi-visual img{width:auto;height:160px;object-fit:contain;border-radius:10px;transition:transform .35s ease}
@@ -164,8 +196,17 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .product-item p{font-size:.88rem;color:#888;padding:0 .5rem;line-height:1.7}
 .product-item .pi-tag{display:inline-block;background:rgba(200,169,110,.12);border-radius:50px;font-size:11px;padding:3px 12px;color:#8b6914;letter-spacing:1px;margin-bottom:8px}
 .product-item .pi-ingredients{font-size:12px;color:#bbb;margin-top:8px;line-height:1.6}
+/* Click indicator */
+.product-item .pi-link{
+  display:inline-block;margin-top:12px;color:#8b6914;font-size:13px;font-weight:600;
+  letter-spacing:1px;border:1px solid rgba(200,169,110,.3);border-radius:30px;
+  padding:6px 20px;transition:all .25s;
+}
+.product-item:hover .pi-link{background:rgba(200,169,110,.15);border-color:#c8a96e;color:#8b6914}
+/* Price */
+.product-item .pi-price{font-size:14px;color:#c8a96e;font-weight:700;margin-top:6px}
 
-/* ============ STAR PRODUCT (from reference about-grid) ============ */
+/* ============ STAR PRODUCT ============ */
 .star-section{background:#fff}
 .star-grid{display:flex;flex-wrap:wrap;gap:2.5rem;align-items:center}
 .star-text{flex:1.2;padding:1rem}
@@ -175,12 +216,6 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .star-visual::before{content:'';position:absolute;inset:0;opacity:.06;background:radial-gradient(ellipse at center,rgba(200,169,110,.6),transparent 70%)}
 .star-visual img{width:100%;max-width:340px;height:auto;object-fit:contain;position:relative;z-index:1;transition:transform .4s ease;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3))}
 .star-visual:hover img{transform:scale(1.04)}
-.star-visual-inner{display:none}
-.star-visual-inner h3{font-size:24px;color:#fff;margin-bottom:8px}
-.star-visual-inner .sv-tag{display:inline-block;background:rgba(200,169,110,.15);color:#c8a96e;padding:6px 18px;border-radius:20px;font-size:12px;letter-spacing:2px;margin-bottom:14px;border:1px solid rgba(200,169,110,.2)}
-.star-visual-inner .sv-features{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;margin-top:16px}
-.star-visual-inner .sv-features span{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.7)}
-.star-visual-inner .sv-features span::before{content:'';width:5px;height:5px;background:#c8a96e;border-radius:50%;flex-shrink:0}
 
 /* ============ AUDIENCE ============ */
 .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -215,7 +250,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .dh-card h4{font-size:17px;color:#fff;margin-bottom:6px}
 .dh-card p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
 
-/* ============ CONTACT (from reference) ============ */
+/* ============ CONTACT ============ */
 .contact-section{background:linear-gradient(120deg,#fef4e8,#fffaf2,#fefaf5);border-radius:40px;padding:3rem 2rem;margin:2rem 0;text-align:center;border:1px solid #eedbc8}
 .contact-section h3{font-size:1.8rem;color:#1a1a2e;margin-bottom:.4rem}
 .contact-details{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1.6rem 0}
@@ -224,7 +259,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .contact-icon{font-size:1.3rem}
 .contact-card a{text-decoration:none;color:#8b6914;font-weight:600}
 .contact-qr-box{display:inline-block;background:#fff;padding:2.5rem 3rem;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,.05);margin-top:1.2rem}
-.contact-qr-box svg{width:150px;height:150px}
+.contact-qr-box img{width:150px;height:150px;border-radius:12px;display:block;margin:0 auto}
 .contact-qr-box p{margin-top:12px;color:#888;font-size:14px}
 
 /* ============ FOOTER ============ */
@@ -252,6 +287,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
   .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(10,22,40,.98);flex-direction:column;padding:20px;gap:14px}
   .nav-links.open{display:flex}.menu-toggle{display:flex}
   .tech-grid{grid-template-columns:1fr}.patents-grid{grid-template-columns:1fr 1fr}
+  .institutes-grid{grid-template-columns:repeat(2,1fr)}
   .gallery-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.t-grid{grid-template-columns:1fr}
   .audience-grid{grid-template-columns:1fr}.dh-grid{grid-template-columns:1fr}
   .contact-details{flex-direction:column;align-items:center}.contact-card{width:90%;justify-content:center}
@@ -263,7 +299,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 
 <!-- ============ NAVBAR ============ -->
 <nav class="navbar" id="navbar">
-  <a href="#" class="nav-logo">
+  <a href="index.html" class="nav-logo">
     <img src="dongfanghong-logo.png" alt="东方红航天生物">
     东方红
   </a>
@@ -376,29 +412,66 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 <!-- ============ CORE TECHNOLOGY ============ -->
 <section class="section tech-section" id="tech">
   <div class="container" style="padding-top:80px;padding-bottom:80px">
-    <div class="text-center">
-      <span class="section-label">TECHNOLOGY</span>
-      <h2 class="section-title">航天核心科技 · 国家科研平台</h2>
-      <div class="divider"></div>
-      <p class="section-subtitle">依托中国航天独一无二的太空资源与国家级科研力量</p>
-    </div>
-    <div class="tech-grid">
-      <div class="tech-card animate"><div class="tc-icon">🛰️</div><h4>空间生物技术</h4><p>微重力、高真空、高能粒子辐射等太空环境诱导菌种基因变异，筛选优良菌种</p></div>
-      <div class="tech-card animate d1"><div class="tc-icon">🧬</div><h4>航天医学转化</h4><p>与中国航天员科研训练中心深度合作，将航天员健康保障体系转化为民用产品</p></div>
-      <div class="tech-card animate d2"><div class="tc-icon">🔬</div><h4>国家级研发平台</h4><p>联合钱学森空间技术实验室、航天东方红抗衰老研究中心等顶级科研机构</p></div>
-      <div class="tech-card animate d3"><div class="tc-icon">👨‍🔬</div><h4>顶尖专家团队</h4><p>汇集航天医学、生物工程、营养学等国内一流专家，多项自主知识产权专利</p></div>
-    </div>
-    <!-- Patents -->
-    <div class="patents-grid">
-      <div class="patent-card animate"><div class="pt-icon">🩸</div><h4>降低血糖专利</h4><p>ZL200810225540.X</p></div>
-      <div class="patent-card animate d1"><div class="pt-icon">🫀</div><h4>降低血压专利</h4><p>ZL200810215542.5</p></div>
-      <div class="patent-card animate d2"><div class="pt-icon">🛡️</div><h4>增强免疫力专利</h4><p>ZL201510098281.3</p></div>
-      <div class="patent-card animate d3"><div class="pt-icon">🦴</div><h4>航天员复合钙专利</h4><p>ZL200510123442.6</p></div>
+    <!-- ============ SEVEN RESEARCH INSTITUTES (七大研究院) ============ -->
+    <div class="institutes-section animate">
+      <h3 class="is-title">东方红核心竞争力 · 国家级科研平台</h3>
+      <p class="is-subtitle">依托中国航天独一无二的太空资源与国家级科研力量，涵盖空间生物技术、航天医学转化、专利研发等完整创新体系</p>
+      <div class="institutes-grid">
+        <a href="research-1.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#e8b86d,#d4a045);--ac-glow:rgba(232,184,109,.12);--ac-shadow:rgba(232,184,109,.1);--ic-bg:linear-gradient(145deg, rgba(232,184,109,.15), rgba(212,160,69,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><rect x="8" y="14" width="64" height="36" rx="4" stroke="#e8b86d" stroke-width="1.8" fill="rgba(232,184,109,.08)"/><path d="M20 26 L28 34 L44 18" stroke="#e8c97a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="56" cy="30" r="10" stroke="#e8b86d" stroke-width="1.5" fill="rgba(232,184,109,.1)"/><text x="56" y="34" text-anchor="middle" fill="#e8c97a" font-size="11" font-weight="700">航天</text><line x1="16" y1="54" x2="64" y2="54" stroke="rgba(232,184,109,.25)" stroke-width="1"/></svg>
+          </div>
+          <h4>中国空间技术研究院</h4>
+          <p>1968年经毛主席批准成立，钱学森任首任院长，承担国家重大航天工程</p>
+        </a>
+        <a href="research-2.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#6ec6e8,#4aa8d4);--ac-glow:rgba(110,198,232,.12);--ac-shadow:rgba(110,198,232,.1);--ic-bg:linear-gradient(145deg, rgba(110,198,232,.15), rgba(74,168,212,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><circle cx="40" cy="26" r="17" stroke="#6ec6e8" stroke-width="1.8" fill="rgba(110,198,232,.08)"/><ellipse cx="40" cy="26" rx="28" ry="9" fill="none" stroke="rgba(110,198,232,.3)" stroke-width="1"/><circle cx="40" cy="26" r="5" fill="#6ec6e8" opacity=".35"/><ellipse cx="28" cy="48" rx="12" ry="4" fill="rgba(110,198,232,.12)"/><rect x="24" y="42" width="32" height="8" rx="3" fill="none" stroke="#6ec6e8" stroke-width="1.2"/><line x1="30" y1="46" x2="50" y2="46" stroke="#6ec6e8" stroke-width="1" opacity=".5"/></svg>
+          </div>
+          <h4>中国航天员科研训练中心</h4>
+          <p>负责中国航天员选拔训练与医学保障，提供航天医学成果支撑</p>
+        </a>
+        <a href="research-3.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#7ee8a0,#50d47a);--ac-glow:rgba(126,232,160,.12);--ac-shadow:rgba(126,232,160,.1);--ic-bg:linear-gradient(145deg, rgba(126,232,160,.15), rgba(80,212,122,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><rect x="14" y="10" width="52" height="38" rx="5" fill="none" stroke="#7ee8a0" stroke-width="1.8"/><line x1="14" y1="22" x2="66" y2="22" stroke="rgba(126,232,160,.25)" stroke-width="1"/><circle cx="30" cy="34" r="7" fill="rgba(126,232,160,.15)" stroke="#7ee8a0" stroke-width="1.3"/><circle cx="50" cy="34" r="7" fill="rgba(126,232,160,.15)" stroke="#7ee8a0" stroke-width="1.3"/><path d="M37 31 L43 37 M43 31 L37 37" stroke="#7ee8a0" stroke-width="1.3" stroke-linecap="round"/><path d="M34 52 Q40 46 46 52" fill="none" stroke="rgba(126,232,160,.3)" stroke-width="1"/></svg>
+          </div>
+          <h4>东方红宇航员保健功能研究室</h4>
+          <p>专注宇航员保健食品功能验证，开发新型功能性保健产品</p>
+        </a>
+        <a href="research-4.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#e89dc8,#d46aab);--ac-glow:rgba(232,157,200,.12);--ac-shadow:rgba(232,157,200,.1);--ic-bg:linear-gradient(145deg, rgba(232,157,200,.15), rgba(212,106,171,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><rect x="10" y="12" width="60" height="36" rx="4" fill="none" stroke="#e89dc8" stroke-width="1.8"/><text x="40" y="33" text-anchor="middle" fill="#e8c9d8" font-size="10" font-weight="700" letter-spacing="1">钱学森</text><text x="40" y="43" text-anchor="middle" fill="rgba(232,157,200,.5)" font-size="7">空间实验室</text><circle cx="66" cy="16" r="4" fill="none" stroke="#e89dc8" stroke-width="1.3"/><path d="M63 19 L59 25" stroke="#e89dc8" stroke-width="1"/><path d="M69 19 L73 25" stroke="#e89dc8" stroke-width="1"/></svg>
+          </div>
+          <h4>钱学森空间技术实验室</h4>
+          <p>传承钱学森学术思想，聚焦空间科学与应用技术研究</p>
+        </a>
+        <a href="research-5.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#f0a060,#e07830);--ac-glow:rgba(240,160,96,.12);--ac-shadow:rgba(240,160,96,.1);--ic-bg:linear-gradient(145deg, rgba(240,160,96,.15), rgba(224,120,48,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><path d="M22 44 Q40 8 58 44 Z" fill="none" stroke="#f0a060" stroke-width="1.8" stroke-linejoin="round"/><circle cx="40" cy="30" r="10" fill="rgba(240,160,96,.12)" stroke="#f0a060" stroke-width="1.2"/><text x="40" y="34" text-anchor="middle" fill="#f0c090" font-size="9" font-weight="700">抗衰</text><path d="M14 48 Q40 58 66 48" fill="none" stroke="rgba(240,160,96,.3)" stroke-width="1.2"/></svg>
+          </div>
+          <h4>航天东方红抗衰老研究中心</h4>
+          <p>跟踪抗衰老新原料与合成生物学进展，研发功能性产品</p>
+        </a>
+        <a href="research-6.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#a09ef0,#7876d4);--ac-glow:rgba(160,158,240,.12);--ac-shadow:rgba(160,158,240,.1);--ic-bg:linear-gradient(145deg, rgba(160,158,240,.15), rgba(120,118,212,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><circle cx="40" cy="27" r="16" fill="none" stroke="#a09ef0" stroke-width="1.8"/><path d="M28 27 L52 27 M40 15 L40 39" stroke="#a09ef0" stroke-width="1.3"/><circle cx="40" cy="27" r="5" fill="rgba(160,158,240,.25)"/><path d="M18 50 L62 50" stroke="rgba(160,158,240,.3)" stroke-width="1.5"/><text x="40" y="57" text-anchor="middle" fill="rgba(160,158,240,.55)" font-size="7.5" letter-spacing="1">主动健康</text></svg>
+          </div>
+          <h4>空间生物主动健康研究院</h4>
+          <p>推动适老食品标准建立、中医养生营养学与脑科学研究</p>
+        </a>
+        <a href="research-7.html" class="institute-card" style="--ac-top:linear-gradient(90deg,#60c8e8,#38a8d0);--ac-glow:rgba(96,200,232,.12);--ac-shadow:rgba(96,200,232,.1);--ic-bg:linear-gradient(145deg, rgba(96,200,232,.15), rgba(56,168,208,.06))">
+          <div class="ic-visual">
+            <svg viewBox="0 0 80 60" fill="none"><polygon points="40,6 68,46 12,46" fill="none" stroke="#60c8e8" stroke-width="1.8" stroke-linejoin="round"/><polygon points="40,16 56,42 24,42" fill="rgba(96,200,232,.08)"/><circle cx="40" cy="32" r="5" fill="rgba(96,200,232,.25)"/><text x="40" y="54" text-anchor="middle" fill="rgba(96,200,232,.5)" font-size="7" letter-spacing="1">南方研究院</text></svg>
+          </div>
+          <h4>太空科技南方研究院</h4>
+          <p>立足华南，推进太空科技成果转化与应用产业化发展</p>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PRODUCT GALLERY (from reference style) ============ -->
+<!-- ============ PRODUCT GALLERY (官方9个产品，可点击跳转) ============ -->
 <section class="section" id="products">
   <div class="container">
     <div class="text-center">
@@ -408,60 +481,115 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       <p class="section-subtitle">基于空间骨保护、调脂调压、抗衰老等航天医学成果<br>专为中老年体质打造的精准营养方案</p>
     </div>
     <div class="gallery-grid">
-      <div class="product-item animate">
+
+      <!-- 产品1：东方红1号牌黄芪香薷酵母口服液 -->
+      <a href="product-1.html" class="product-item animate">
         <div class="pi-visual">
-          <img src="product-1.png" alt="胶原氨糖软骨素钙片">
+          <img src="product-dfh1-new.png" alt="东方红1号牌黄芪香薷酵母口服液">
         </div>
-        <h4>胶原氨糖软骨素钙片</h4>
-        <span class="pi-tag">航天员用复合钙制剂专利转化</span>
-        <p>全营养型骨保护剂，增强骨密度、改善关节功能</p>
-        <p class="pi-ingredients">水解胶原蛋白 · D-氨基葡萄糖 · 硫酸软骨素 · 柠檬酸钙</p>
-      </div>
-      <div class="product-item animate d1">
+        <h4>东方红1号牌黄芪香薷酵母口服液</h4>
+        <span class="pi-tag">863计划成果 · 双项发明专利</span>
+        <p>增强免疫力，调节肠道菌群</p>
+        <p class="pi-ingredients">酿酒酵母发酵液 · 黄芪 · 香薷 · 低聚木糖 · 牛磺酸</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品3：航天东方红牌灵芝红景天胶囊 -->
+      <a href="product-3.html" class="product-item animate d1">
         <div class="pi-visual">
-          <img src="product-2.png" alt="天曲益压康片">
+          <img src="product-lingzhi.png" alt="航天东方红牌灵芝红景天胶囊">
         </div>
-        <h4>天曲益压康片</h4>
-        <span class="pi-tag">航天搭载红曲 · 调压专利</span>
-        <p>调节血压，改善心脑血管微循环</p>
-        <p class="pi-ingredients">航天搭载红曲 · 罗布麻提取物 · 野菊花提取物 · 珍珠母粉</p>
-      </div>
-      <div class="product-item animate d2">
+        <h4>航天东方红牌灵芝红景天胶囊</h4>
+        <span class="pi-tag">有助于增强免疫力</span>
+        <p>灵芝+红景天+蝙蝠蛾拟青霉菌粉</p>
+        <p class="pi-ingredients">灵芝 · 红景天 · 蝙蝠蛾拟青霉菌粉</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品4：航天东方红牌辅酶Q10维生素E软胶囊 -->
+      <a href="product-4.html" class="product-item animate">
         <div class="pi-visual">
-          <img src="product-3.png" alt="天曲糖定康片">
+          <img src="product-q10-final.png" alt="航天东方红牌辅酶Q10维生素E软胶囊">
         </div>
-        <h4>天曲糖定康片</h4>
-        <span class="pi-tag">航天搭载红曲 · 调糖专利</span>
-        <p>辅助调节血糖，促进糖代谢平衡</p>
-        <p class="pi-ingredients">航天搭载红曲 · 西洋参 · 蜂胶 · 吡啶甲酸铬</p>
-      </div>
-      <div class="product-item animate">
+        <h4>航天东方红牌辅酶Q10维生素E软胶囊</h4>
+        <span class="pi-tag">辅酶Q10复合软胶囊发明专利</span>
+        <p>有助于增强免疫力</p>
+        <p class="pi-ingredients">辅酶Q10 · 维生素E · 乳酸锌 · 亚硒酸钠</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品5：航研牌氨糖软骨素钙片 -->
+      <a href="product-5.html" class="product-item animate d1">
         <div class="pi-visual">
-          <img src="product-4.png" alt="航研牌辅酶Q₁₀胶囊">
+          <img src="product-at-final.png" alt="航研牌氨糖软骨素钙片">
         </div>
-        <h4>航研牌辅酶Q₁₀胶囊</h4>
-        <span class="pi-tag">空间诱变菌种 · 高纯度发酵</span>
-        <p>高效能、高纯度辅酶Q10，保护心脏，抗氧化</p>
-        <p class="pi-ingredients">空间搭载菌种联合ARTP诱变技术 · 创新制粒工艺</p>
-      </div>
-      <div class="product-item animate d1">
+        <h4>航研牌氨糖软骨素钙片</h4>
+        <span class="pi-tag">空间骨丢失防护成果转化</span>
+        <p>增加骨密度</p>
+        <p class="pi-ingredients">柠檬酸钙 · 水解胶原蛋白 · 氨糖 · 硫酸软骨素</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品6：航天东方红牌钙维D胶原片 -->
+      <a href="product-6.html" class="product-item animate d2">
         <div class="pi-visual">
-          <img src="product-5.png" alt="鱼蛋白粉固体饮料">
+          <img src="product-ggw-new.png" alt="航天东方红牌钙维D胶原片">
         </div>
-        <h4>鱼蛋白粉固体饮料</h4>
-        <span class="pi-tag">多国专利 · 海洋低聚肽</span>
-        <p>降解乳酸及尿酸，抗疲劳抗发炎，分子量仅200道尔顿</p>
-        <p class="pi-ingredients">纯天然鲣鱼/鲔鱼低聚肽 · 每1g提取自2000g生鲜鲣鱼</p>
-      </div>
-      <div class="product-item animate d2">
+        <h4>航天东方红牌钙维D胶原片</h4>
+        <span class="pi-tag">航天员用复合钙制剂专利 · 发明展金奖</span>
+        <p>有助于改善骨密度</p>
+        <p class="pi-ingredients">碳酸钙 · 水解胶原蛋白 · 水苏糖 · 维生素D3</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品7：航天东方红牌番茄红素葡萄籽软胶囊 -->
+      <a href="product-7.html" class="product-item animate">
         <div class="pi-visual">
-          <img src="product-6.png" alt="雪莲培养物抗衰老系列">
+          <img src="product-tomato.png" alt="航天东方红牌番茄红素葡萄籽软胶囊">
         </div>
-        <h4>雪莲培养物抗衰老系列</h4>
-        <span class="pi-tag">航天抗衰老研究中心出品</span>
-        <p>五抗：抗氧化·抗衰老·抗肿瘤·抗炎症·抗疲劳</p>
-        <p class="pi-ingredients">雪莲培养物 · 红酒粉 · 蛹虫草 · 雨生红球藻</p>
-      </div>
+        <h4>航天东方红牌番茄红素葡萄籽软胶囊</h4>
+        <span class="pi-tag">复合植物营养素细胞免疫专利</span>
+        <p>抗氧化</p>
+        <p class="pi-ingredients">番茄红素油树脂 · 葡萄籽提取物</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品8：航天神舟牌鱼蛋白粉固体饮料 -->
+      <a href="product-8.html" class="product-item animate d1">
+        <div class="pi-visual">
+          <img src="product-yudanbai.png" alt="航天神舟牌鱼蛋白粉固体饮料">
+        </div>
+        <h4>航天神舟牌鱼蛋白粉固体饮料</h4>
+        <span class="pi-tag">100倍浓缩海洋低聚肽 · 缓解疲劳</span>
+        <p>缓解体力疲劳，对化学性肝损伤有辅助保护功能</p>
+        <p class="pi-ingredients">远洋鲣鱼/鲔鱼肉萃取 · 低分子量200道尔顿</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品9：天曲牌益压康片 -->
+      <a href="product-9.html" class="product-item animate d2">
+        <div class="pi-visual">
+          <img src="product-yiyakang.png" alt="天曲牌益压康片">
+        </div>
+        <h4>天曲牌益压康片</h4>
+        <span class="pi-tag">调节血压 · 发明专利ZL200810215542.5</span>
+        <p>调节血压</p>
+        <p class="pi-ingredients">珍珠母 · 红曲 · 罗布麻提取物 · 野菊花提取物</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
+      <!-- 产品10：航天天胶牌糖定康片 -->
+      <a href="product-10.html" class="product-item animate">
+        <div class="pi-visual">
+          <img src="product-tangdingkang.png" alt="航天天胶牌糖定康片">
+        </div>
+        <h4>航天天胶牌糖定康片</h4>
+        <span class="pi-tag">调节血糖 · 太空搭载红曲他汀 · 发明专利</span>
+        <p>调节血糖</p>
+        <p class="pi-ingredients">蜂胶 · 红曲 · 珍珠母 · 西洋参 · 吡啶甲酸铬</p>
+        <span class="pi-link">查看详情 →</span>
+      </a>
+
     </div>
   </div>
 </section>
@@ -472,35 +600,22 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
     <div class="card" style="padding:2rem;">
       <div class="star-grid">
         <div class="star-visual animate">
-          <img src="product-7.png" alt="东方红一号黄芪香薷酵母口服液">
-          <div class="star-visual-inner">
-            <span class="sv-tag">✧ 8次太空搭载 ✧</span>
-            <h3>东方红一号<br>黄芪香薷酵母口服液</h3>
-            <p style="color:rgba(255,255,255,.55);font-size:14px;margin-bottom:12px">原「宇航口服液」· 航天员专属营养保障</p>
-            <div class="sv-features">
-              <span>3000+种活性酶与辅酶</span><span>航天生物技术制备</span>
-              <span>国家发明专利认证</span><span>863计划重大成果</span>
-              <span>全面调节机体功能</span><span>适合长期温和调养</span>
-            </div>
-          </div>
+          <img src="product-dfh1-new.png" alt="东方红1号牌黄芪香薷酵母口服液">
         </div>
         <div class="star-text animate d1">
           <span class="section-label">STAR PRODUCT</span>
           <h2>国家863计划<br>空间生命科学重大成果</h2>
           <div class="accent-line" style="margin-bottom:16px"></div>
-          <p>「东方红一号」口服液含有<strong>3000多种酶和辅酶</strong>，能够极大地活化细胞代谢，调节全身机能。酶是人体内所有细胞生命活动的催化剂，支配着新陈代谢、营养与能量转换等多个催化过程。人体内酶的储存量越大、越完整，人就越健康、长寿。</p>
+          <p><strong>东方红1号牌黄芪香薷酵母口服液</strong>，源自「863计划」成果，应用「整体功能态」理论研制的多功能营养液。由「东方红一号」酿酒酵母菌株发酵液和黄芪、香薷药食同源中药材，及低聚木糖、牛磺酸、碳酸钙、硫酸锌等多种营养成分科学组方。</p>
           <ul class="feature-list">
-            <li><strong>增强免疫</strong>，调节免疫平衡</li>
-            <li><strong>改善胃肠功能</strong>，调节肠道菌群</li>
-            <li><strong>阻止骨钙流失</strong>，增加骨密度</li>
-            <li><strong>改善睡眠</strong>，提升睡眠品质</li>
-            <li><strong>提高细胞代谢</strong>，促进废物排出</li>
-            <li><strong>促进细胞更新</strong>，维持器官年轻化</li>
-            <li><strong>净化血液</strong>，中和与排除体内毒素</li>
-            <li><strong>减轻放化疗副作用</strong>，提升生存质量</li>
-            <li><strong>恢复体力</strong>，增强体质，抗疲劳</li>
+            <li>发明专利：利用航天生物技术制备酿酒酵母制品的方法及其制品</li>
+            <li>发明专利：改善航天特因环境下睡眠的组合物及其制备方法和应用</li>
+            <li><strong>增强免疫力</strong>，经动物实验评价，具有增强免疫力的保健功能</li>
+            <li><strong>调节肠道菌群</strong>，维护肠道微生态平衡</li>
+            <li>源自「863计划」空间生命科学重大成果</li>
+            <li>含粗多糖、牛磺酸、低聚木糖等标志性成分</li>
           </ul>
-          <a href="#contact" class="btn-gold" style="margin-top:18px;display:inline-block">咨询产品详情</a>
+          <a href="product-1.html" class="btn-gold" style="margin-top:18px;display:inline-block">查看产品详情</a>
         </div>
       </div>
     </div>
@@ -516,11 +631,11 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       <div class="divider"></div>
       <p class="section-subtitle">源自航天医学研究的精准营养方案</p>
     </div>
-    <div class="audience-grid">
+    <div class="audience-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="audience-card animate">
         <div class="ac-icon">🛡️</div>
         <h4>免疫力低下 · 易疲劳</h4>
-        <p>经常感冒、身体虚弱、恢复缓慢的中老年人，含3000+种活性酶全面调节免疫</p>
+        <p>经常感冒、身体虚弱、恢复缓慢的中老年人，东方红1号口服液含3000+种活性酶全面调节免疫</p>
       </div>
       <div class="audience-card animate d1">
         <div class="ac-icon">🦴</div>
@@ -529,8 +644,13 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       </div>
       <div class="audience-card animate d2">
         <div class="ac-icon">🫀</div>
-        <h4>三高及代谢问题</h4>
-        <p>血糖、血压、血脂偏高人群，国家发明专利产品辅助调理代谢平衡</p>
+        <h4>血压偏高 · 血脂异常</h4>
+        <p>血压血脂偏高人群，航天搭载红曲国家发明专利产品辅助调节血压和血脂平衡</p>
+      </div>
+      <div class="audience-card animate">
+        <div class="ac-icon">💉</div>
+        <h4>血糖偏高 · 肝功能关注</h4>
+        <p>血糖偏高或需护肝人群，糖定康片调节血糖+鱼蛋白粉保肝护肝双管齐下</p>
       </div>
     </div>
   </div>
@@ -553,13 +673,13 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       </div>
       <div class="t-card animate d1">
         <div class="stars">★★★★★</div>
-        <p class="text">骨质疏松好多年了，上楼下楼膝盖疼得不行。女儿在航天系统工作推荐了这个钙片，说是航天员的钙。吃了大半年膝盖真的不疼了，上周还跟老姐妹去爬山了。</p>
+        <p class="text">骨质疏松好多年了，上楼下楼膝盖疼得不行。女儿在航天系统工作推荐了这个氨糖软骨素钙片，说是航天员骨保护成果转化。吃了大半年膝盖真的不疼了，上周还跟老姐妹去爬山了。</p>
         <div class="t-user"><div class="t-avatar">刘</div><div><div class="t-name">刘叔叔</div><div class="t-info">72岁 · 退休工程师 · 服用8个月</div></div></div>
       </div>
       <div class="t-card animate d2">
         <div class="stars">★★★★★</div>
-        <p class="text">血糖一直偏高，朋友推荐了糖定康片，说是航天搭载红曲做的有发明专利。配合饮食控制吃了四个月，血糖真的稳定了不少，体检报告比去年好看多了。</p>
-        <div class="t-user"><div class="t-avatar">张</div><div><div class="t-name">张叔叔</div><div class="t-info">58岁 · 企业主管 · 服用4个月</div></div></div>
+        <p class="text">免疫力一直不太好，换季就容易感冒。女儿买了航天东方红的灵芝红景天胶囊给我，说是航天技术做的保健食品。吃了半年多，今年冬天居然一次感冒都没有，连老伴都跟着一起吃了。</p>
+        <div class="t-user"><div class="t-avatar">张</div><div><div class="t-name">张叔叔</div><div class="t-info">58岁 · 企业主管 · 服用6个月</div></div></div>
       </div>
     </div>
   </div>
@@ -582,7 +702,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
   </div>
 </section>
 
-<!-- ============ CONTACT (from reference style) ============ -->
+<!-- ============ CONTACT ============ -->
 <section id="contact">
 <div class="container">
 <div class="contact-section animate">

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国航天员科研训练中心 — 东方红航天生物</title>
+<meta name="description" content="中国航天员科研训练中心是中国唯一负责航天员选拔、训练、医学保障的专业机构，为东方红公司提供航天医学研究成果和技术支持">
+<link rel="icon" href="dongfanghong-logo.png">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif;color:#2e241f;background:#fefaf5;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:90px 0}
+.accent-line{width:64px;height:3px;background:linear-gradient(90deg,#c8a96e,#8b6914);border-radius:2px;display:inline-block;margin-bottom:18px}
+.divider{width:80px;height:3px;background:#c8a96e;margin:0.8rem auto;border-radius:3px}
+.section-label{display:inline-block;font-size:13px;letter-spacing:5px;color:#c8a96e;text-transform:uppercase;margin-bottom:8px;font-weight:600}
+.section-title{font-size:34px;color:#1a1a2e;margin-bottom:12px;font-weight:700;letter-spacing:1px}
+.section-subtitle{font-size:16px;color:#888;margin-bottom:48px;max-width:600px;line-height:1.8}
+.text-center{text-align:center}
+.text-center .section-subtitle{margin-left:auto;margin-right:auto}
+.badge-tag{display:inline-block;background:rgba(200,169,110,.12);border-radius:50px;font-size:12px;padding:4px 14px;color:#8b6914;letter-spacing:1px;font-weight:500}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.96);backdrop-filter:blur(12px);padding:0 32px;height:70px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;border-bottom:1px solid rgba(200,169,110,.15)}
+.navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.3)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:#fff;letter-spacing:2px}
+.nav-logo img{height:40px;width:auto;border-radius:6px;object-fit:contain;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 0 0 1px rgba(200,169,110,.2),0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.05);padding:2px}
+.nav-logo:hover img{transform:scale(1.06);box-shadow:0 0 0 1.5px rgba(200,169,110,.4),0 4px 16px rgba(0,0,0,.3)}
+.nav-links{display:flex;gap:36px}
+.nav-links a{color:rgba(255,255,255,.78);font-size:14px;letter-spacing:1.5px;transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:#c8a96e;transition:width .3s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.menu-toggle span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+/* INSTITUTE HERO */
+.institute-hero{min-height:480px;display:flex;align-items:center;background:linear-gradient(160deg,#0a1628 0%,#122440 35%,#0a1628 100%);position:relative;overflow:hidden;padding-top:70px;border-radius:0 0 48px 48px;margin-bottom:-40px}
+.institute-hero::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,.12),transparent 70%)}
+.institute-hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(196,30,58,.08),transparent 70%)}
+.hero-stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 30% 40%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 50% 15%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 65% 35%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 80% 25%,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 20% 60%,rgba(255,255,255,.45),transparent),radial-gradient(1px 1px at 70% 65%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 88% 55%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 55% 80%,rgba(255,255,255,.3),transparent)}
+.institute-hero .container{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:50px;align-items:center}
+.hero-info{flex:1;min-width:300px}
+.hero-info .back-link{display:inline-flex;align-items:center;gap:8px;color:#c8a96e;font-size:14px;letter-spacing:1px;margin-bottom:24px;border:1px solid rgba(200,169,110,.3);padding:8px 18px;border-radius:30px;transition:all .25s}
+.hero-info .back-link:hover{background:rgba(200,169,110,.15);border-color:#c8a96e}
+.hero-info .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(200,169,110,.4);color:#c8a96e;padding:6px 18px;border-radius:24px;font-size:13px;letter-spacing:3px;margin-bottom:20px}
+.hero-info .hero-tag::before{content:'';width:7px;height:7px;background:#c8a96e;border-radius:50%}
+.hero-info h1{font-size:42px;color:#fff;line-height:1.25;margin-bottom:18px;font-weight:700}
+.hero-info h1 span{background:linear-gradient(135deg,#c8a96e,#e8c97a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-info .hero-desc{font-size:16px;color:rgba(255,255,255,.65);line-height:1.9;margin-bottom:24px}
+.hero-info .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+.hero-info .hero-badges .badge-tag{background:rgba(200,169,110,.15);color:#c8a96e;border:1px solid rgba(200,169,110,.25)}
+.hero-visual{flex:0 0 320px;text-align:center}
+.hero-emblem{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(200,169,110,.1),transparent 70%);border:2px solid rgba(200,169,110,.25);display:flex;align-items:center;justify-content:center;position:relative;margin:0 auto;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+.hero-emblem-inner{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,rgba(200,169,110,.2),rgba(200,169,110,.05));display:flex;align-items:center;justify-content:center}
+.hero-emblem-inner svg{width:100px;height:100px}
+.hero-emblem::before{content:'';position:absolute;width:360px;height:110px;border:1px solid rgba(200,169,110,.08);border-radius:50%;transform:rotate(-15deg)}
+
+/* CARD */
+.card{background:#fff;border-radius:24px;box-shadow:0 8px 28px rgba(0,0,0,.05);overflow:hidden;margin-bottom:2rem;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.08)}
+
+/* DETAIL GRID */
+.detail-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:start}
+.detail-text h2{font-size:1.9rem;color:#1a1a2e;margin-bottom:1rem;border-left:5px solid #c8a96e;padding-left:1rem}
+.detail-text p{margin-bottom:1rem;color:#3e2c21;font-size:1.05rem;line-height:1.9}
+.detail-text p strong{color:#8b6914}
+.detail-aside{background:linear-gradient(135deg,#0a1628,#122440);border-radius:24px;padding:2rem;color:#fff;position:relative;overflow:hidden}
+.detail-aside::before{content:'';position:absolute;inset:0;opacity:.06;background:radial-gradient(ellipse at center,rgba(200,169,110,.6),transparent 70%)}
+.detail-aside h3{font-size:20px;color:#fff;margin-bottom:16px;position:relative;z-index:1;letter-spacing:1px}
+.detail-aside .accent-line{margin-bottom:18px;position:relative;z-index:1}
+.fact-list{position:relative;z-index:1}
+.fact-list li{margin-bottom:14px;padding-left:20px;position:relative;font-size:14px;color:rgba(255,255,255,.75);line-height:1.8}
+.fact-list li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;background:#c8a96e;border-radius:50%}
+.fact-list li strong{color:#c8a96e}
+
+/* FUNCTION GRID */
+.function-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.function-card{background:#fff;border-radius:18px;padding:32px 22px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.035);transition:all .3s;border:1px solid #f3e8d8}
+.function-card:hover{transform:translateY(-4px);border-color:rgba(200,169,110,.3);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.function-card .fc-icon{width:56px;height:56px;border-radius:50%;background:rgba(200,169,110,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.function-card .fc-icon svg{width:30px;height:30px}
+.function-card h4{font-size:17px;color:#1a1a2e;margin-bottom:8px;font-weight:700}
+.function-card p{font-size:13px;color:#888;line-height:1.7}
+
+/* COOPERATION */
+.coop-section{background:linear-gradient(135deg,#0a1628,#122440);color:#fff;border-radius:48px 48px 0 0;position:relative;overflow:hidden}
+.coop-section::before{content:'';position:absolute;inset:0;opacity:.05;background:radial-gradient(circle at 30% 50%,#c8a96e,transparent 50%)}
+.coop-section .section-title{color:#fff}
+.coop-section .section-subtitle{color:rgba(255,255,255,.55)}
+.coop-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative;z-index:1}
+.coop-card{background:rgba(255,255,255,.04);border:1px solid rgba(200,169,110,.15);border-radius:18px;padding:32px 26px;transition:all .3s}
+.coop-card:hover{background:rgba(255,255,255,.08);border-color:rgba(200,169,110,.35);transform:translateY(-3px)}
+.coop-card .cc-num{font-size:14px;color:#c8a96e;font-weight:700;letter-spacing:2px;margin-bottom:10px}
+.coop-card h4{font-size:18px;color:#fff;margin-bottom:10px;font-weight:600}
+.coop-card p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.8}
+
+/* FEATURE LIST */
+.feature-list{list-style:none;margin-top:1.2rem}
+.feature-list li{margin-bottom:.7rem;display:flex;align-items:center;gap:.6rem;font-size:15px;color:#555}
+.feature-list li::before{content:"";display:inline-block;width:8px;height:8px;background:#c8a96e;border-radius:50%;flex-shrink:0}
+
+/* CONTACT */
+.contact-section{background:linear-gradient(120deg,#fef4e8,#fffaf2,#fefaf5);border-radius:40px;padding:3rem 2rem;margin:2rem 0;text-align:center;border:1px solid #eedbc8}
+.contact-section h3{font-size:1.8rem;color:#1a1a2e;margin-bottom:.4rem}
+.contact-details{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:1.6rem 0}
+.contact-card{background:#fff;padding:.8rem 1.6rem;border-radius:60px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 3px 12px rgba(0,0,0,.04);font-size:1rem;font-weight:500;color:#3e2c21;transition:all .25s;border:1px solid #f0e8d8}
+.contact-card:hover{background:#faf5ec;transform:scale(1.02)}
+.contact-icon{font-size:1.3rem}
+.contact-card a{text-decoration:none;color:#8b6914;font-weight:600}
+.contact-qr-box{display:inline-block;background:#fff;padding:2.5rem 3rem;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,.05);margin-top:1.2rem}
+.contact-qr-box img{width:150px;height:150px;border-radius:12px;display:block;margin:0 auto}
+.contact-qr-box p{margin-top:12px;color:#888;font-size:14px}
+
+/* FOOTER */
+.footer{background:#0a1628;color:rgba(255,255,255,.5);padding:40px 0;text-align:center;font-size:13px;margin-top:3rem}
+.footer .fbrand{color:#c8a96e;font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:3px}
+.footer p{margin:4px 0}
+
+/* ANIMATIONS */
+.animate{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.animate.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .detail-grid{grid-template-columns:1fr}
+  .function-grid{grid-template-columns:repeat(2,1fr)}
+  .coop-grid{grid-template-columns:1fr}
+  .institute-hero .container{flex-direction:column;text-align:center}
+  .hero-info{order:1}
+  .hero-visual{order:0;flex:none}
+  .hero-emblem{width:220px;height:220px}.hero-emblem-inner{width:120px;height:120px}.hero-emblem-inner svg{width:70px;height:70px}
+  .hero-info h1{font-size:32px}
+  .hero-info .hero-badges{justify-content:center}
+}
+@media(max-width:768px){
+  .section{padding:56px 0}.section-title{font-size:26px}
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(10,22,40,.98);flex-direction:column;padding:20px;gap:14px}
+  .nav-links.open{display:flex}.menu-toggle{display:flex}
+  .function-grid{grid-template-columns:1fr}
+  .hero-info h1{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="dongfanghong-logo.png" alt="东方红航天生物">
+    东方红
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#hero">首页</a></li>
+    <li><a href="index.html#about">公司背景</a></li>
+    <li><a href="index.html#tech">核心技术</a></li>
+    <li><a href="index.html#products">航天产品</a></li>
+    <li><a href="index.html#star">明星单品</a></li>
+    <li><a href="index.html#contact">联系我们</a></li>
+  </ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- INSTITUTE HERO -->
+<section class="institute-hero">
+  <div class="hero-stars"></div>
+  <div class="container">
+    <div class="hero-info animate">
+      <a href="index.html#tech" class="back-link">← 返回主页</a>
+      <span class="hero-tag">航天医学权威机构</span>
+      <h1>中国航天员科研训练中心<br><span>Astronaut Research and Training Center</span></h1>
+      <p class="hero-desc">中国航天员科研训练中心是中国唯一负责航天员选拔、训练、医学保障的专业机构。承担中国所有航天员的选拔与系统训练，研发航天员在轨健康保障体系，为东方红公司提供航天医学研究成果和技术支持。</p>
+      <div class="hero-badges">
+        <span class="badge-tag">航天员选拔</span>
+        <span class="badge-tag">系统训练</span>
+        <span class="badge-tag">医学保障</span>
+        <span class="badge-tag">航天医学转化</span>
+      </div>
+    </div>
+    <div class="hero-visual animate d1">
+      <div class="hero-emblem">
+        <div class="hero-emblem-inner">
+          <svg viewBox="0 0 100 100" fill="none">
+            <!-- 宇航员头盔 -->
+            <circle cx="50" cy="42" r="22" stroke="#c8a96e" stroke-width="2" fill="rgba(200,169,110,.08)"/>
+            <ellipse cx="50" cy="42" rx="16" ry="18" stroke="rgba(200,169,110,.4)" stroke-width="1" fill="rgba(200,169,110,.05)"/>
+            <path d="M40 36 Q50 32 60 36" stroke="#c8a96e" stroke-width="1.2" fill="none"/>
+            <circle cx="44" cy="42" r="2" fill="#c8a96e" opacity=".6"/>
+            <circle cx="56" cy="42" r="2" fill="#c8a96e" opacity=".6"/>
+            <!-- 头盔反光 -->
+            <path d="M38 50 Q42 56 50 56" stroke="rgba(255,255,255,.3)" stroke-width="1.2" fill="none"/>
+            <!-- 身体 -->
+            <path d="M36 64 L36 80 Q36 84 40 84 L60 84 Q64 84 64 80 L64 64" stroke="#c8a96e" stroke-width="2" fill="rgba(200,169,110,.1)"/>
+            <!-- 胸前控制面板 -->
+            <rect x="44" y="68" width="12" height="8" rx="1" stroke="#c8a96e" stroke-width="1" fill="rgba(200,169,110,.2)"/>
+            <circle cx="47" cy="72" r="1" fill="#c8a96e"/>
+            <circle cx="53" cy="72" r="1" fill="#c8a96e"/>
+            <!-- 肩部 -->
+            <line x1="36" y1="66" x2="28" y2="72" stroke="#c8a96e" stroke-width="1.5"/>
+            <line x1="64" y1="66" x2="72" y2="72" stroke="#c8a96e" stroke-width="1.5"/>
+            <!-- 顶部天线 -->
+            <line x1="50" y1="20" x2="50" y2="14" stroke="#c8a96e" stroke-width="1.2"/>
+            <circle cx="50" cy="12" r="2" fill="#c8a96e"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-text animate">
+        <span class="section-label">ABOUT ACC</span>
+        <h2>中国唯一的航天员专业科研训练机构</h2>
+        <div class="accent-line" style="margin-bottom:16px"></div>
+        <p>中国航天员科研训练中心是中国<strong>唯一</strong>负责航天员选拔、训练、医学保障的专业机构，承担着中国载人航天工程中航天员系统的全部核心任务。</p>
+        <p>中心负责<strong>中国所有航天员的选拔与系统训练</strong>，包括基础理论训练、专业训练、飞行任务模拟训练等完整训练体系，确保每一位航天员都能胜任太空任务。</p>
+        <p>中心研发<strong>航天员在轨健康保障体系</strong>，涵盖航天员在太空环境下的生理监测、医学防护、营养保障、心理支持等全方位健康保障技术，为中国空间站长期驻留任务提供医学支撑。</p>
+        <p>中心为东方红公司提供<strong>航天医学研究成果和技术支持</strong>，将航天员健康保障体系中积累的医学成果转化为民用健康产品，合作开发宇航员营养保障相关保健食品。</p>
+
+        <div style="margin-top:1.5rem;padding:1.2rem 1.4rem;background:#fefaf5;border-left:4px solid #c8a96e;border-radius:0 12px 12px 0">
+          <p style="margin:0;font-size:14px;color:#555"><strong style="color:#8b6914">核心使命：</strong>保障航天员在太空环境下的健康与安全，并将航天医学成果造福于民。</p>
+        </div>
+
+        <h3 style="font-size:18px;color:#1a1a2e;margin:2rem 0 1rem;border-left:4px solid #c8a96e;padding-left:12px">核心科研方向</h3>
+        <ul class="feature-list">
+          <li>航天员选拔标准与评价体系研究</li>
+          <li>航天特因环境下人体生理适应性研究</li>
+          <li>航天员在轨健康监测与医学保障技术</li>
+          <li>航天员营养需求与功能性食品研发</li>
+          <li>航天医学成果向民用健康领域转化</li>
+        </ul>
+      </div>
+      <div class="detail-aside animate d1">
+        <h3>核心事实</h3>
+        <div class="accent-line"></div>
+        <ul class="fact-list">
+          <li><strong>机构定位</strong>：中国唯一航天员专业科研训练机构</li>
+          <li><strong>核心职责</strong>：航天员选拔、训练、医学保障</li>
+          <li><strong>承担任务</strong>：中国所有航天员的选拔与系统训练</li>
+          <li><strong>科研方向</strong>：航天员在轨健康保障体系研发</li>
+          <li><strong>航天医学</strong>：航天特因环境生理适应性研究</li>
+          <li><strong>营养研究</strong>：航天员营养需求与功能食品研发</li>
+          <li><strong>成果转化</strong>：为东方红提供航天医学研究成果</li>
+          <li><strong>合作开发</strong>：宇航员营养保障相关保健食品</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE FUNCTIONS -->
+<section class="section" style="background:#fefaf5">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">CORE FUNCTIONS</span>
+      <h2 class="section-title">四大核心职能</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">构建航天员全生命周期健康保障体系</p>
+    </div>
+    <div class="function-grid">
+      <div class="function-card animate">
+        <div class="fc-icon">
+          <svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="12" r="5" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.15)"/><path d="M8 26 Q15 20 22 26" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="15" cy="12" r="1.5" fill="#c8a96e"/></svg>
+        </div>
+        <h4>航天员选拔</h4>
+        <p>制定航天员选拔标准与评价体系，负责中国所有航天员的医学选拔、心理选拔与综合评定</p>
+      </div>
+      <div class="function-card animate d1">
+        <div class="fc-icon">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 4 L15 10 M15 20 L15 26 M4 15 L10 15 M20 15 L26 15" stroke="#c8a96e" stroke-width="1.5"/><rect x="11" y="11" width="8" height="8" rx="1" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.15)"/></svg>
+        </div>
+        <h4>医学保障</h4>
+        <p>研发航天员在轨健康保障体系，涵盖生理监测、医学防护、疾病诊治等全方位医学保障</p>
+      </div>
+      <div class="function-card animate d2">
+        <div class="fc-icon">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M5 20 L10 14 L15 18 L20 10 L25 16" stroke="#c8a96e" stroke-width="1.5" fill="none"/><circle cx="10" cy="14" r="1.5" fill="#c8a96e"/><circle cx="20" cy="10" r="1.5" fill="#c8a96e"/></svg>
+        </div>
+        <h4>健康监测</h4>
+        <p>建立航天员在轨健康实时监测体系，开展航天特因环境下人体生理适应性研究</p>
+      </div>
+      <div class="function-card animate d3">
+        <div class="fc-icon">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 4 L15 12 M11 12 L19 12" stroke="#c8a96e" stroke-width="1.5"/><path d="M10 26 Q15 18 20 26 Z" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.15)"/><circle cx="15" cy="22" r="1.5" fill="#c8a96e"/></svg>
+        </div>
+        <h4>营养研究</h4>
+        <p>研究航天员营养需求，研发功能性食品，合作开发宇航员营养保障相关保健食品</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COOPERATION -->
+<section class="section coop-section">
+  <div class="container" style="padding-top:80px;padding-bottom:80px">
+    <div class="text-center">
+      <span class="section-label">COOPERATION</span>
+      <h2 class="section-title">与东方红公司的合作关系</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">为东方红公司提供航天医学研究成果和技术支持，将航天员健康保障体系转化为民用产品</p>
+    </div>
+    <div class="coop-grid">
+      <div class="coop-card animate">
+        <div class="cc-num">01</div>
+        <h4>航天医学成果转化</h4>
+        <p>中心为东方红公司提供航天医学研究成果和技术支持，将航天员在轨健康保障体系中积累的医学成果、营养配方、健康监测技术转化为民用健康产品。</p>
+      </div>
+      <div class="coop-card animate d1">
+        <div class="cc-num">02</div>
+        <h4>宇航员营养保障合作</h4>
+        <p>与东方红公司合作开发宇航员营养保障相关保健食品，将航天员专属的营养配方与功能成分筛选标准应用于民用保健产品研发。</p>
+      </div>
+      <div class="coop-card animate d2">
+        <div class="cc-num">03</div>
+        <h4>健康监测技术输出</h4>
+        <p>将航天员在轨健康监测技术体系输出至东方红公司，支撑AI数智主动健康管理平台的研发，实现航天医学成果的民用化应用。</p>
+      </div>
+      <div class="coop-card animate d3">
+        <div class="cc-num">04</div>
+        <h4>航天医学研究支撑</h4>
+        <p>中心持续的航天医学研究成果为东方红公司产品研发提供科学背书与技术支撑，确保产品具有航天医学的科学严谨性与权威性。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<div class="contact-section animate">
+  <h3>联系东方红 · 健康顾问</h3>
+  <div class="divider"></div>
+  <p style="margin-bottom:.8rem;color:#888">产品咨询 | 经销合作 | 健康指导 | 售后支持</p>
+  <div class="contact-details">
+    <div class="contact-card">
+      <span class="contact-icon">📞</span>
+      <span>咨询热线：<a href="tel:13973669373">13973669373</a></span>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">✉️</span>
+      <span>电子邮箱：<a href="mailto:1940045503@qq.com">1940045503@qq.com</a></span>
+    </div>
+  </div>
+  <div class="contact-details">
+    <div class="contact-card">
+      <span class="contact-icon">📍</span>
+      <span>总部地址：北京市朝阳区东方红健康产业园B座</span>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">⏰</span>
+      <span>服务时间：周一至周日 9:00 – 21:00</span>
+    </div>
+  </div>
+  <div class="contact-qr-box">
+    <img src="qrcode.png" alt="微信二维码" style="width:150px;height:150px;border-radius:12px;display:block;margin:0 auto">
+    <p>微信扫一扫 · 添加健康顾问<br>获取专属航天健康方案</p>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fbrand">东方红航天生物</div>
+  <p>航天科技 · 引领健康未来</p>
+  <p style="margin-top:10px">© 2026 北京东方红航天生物技术股份有限公司 版权所有</p>
+  <p style="color:rgba(255,255,255,.25);margin-top:4px">本页面内容仅供参考，不构成医疗建议。保健食品不是药物，不能代替药物治疗疾病。</p>
+</footer>
+
+<script>
+(function(){
+  var nb=document.getElementById('navbar'),tick=false;
+  window.addEventListener('scroll',function(){if(!tick){requestAnimationFrame(function(){nb.classList.toggle('scrolled',window.pageYOffset>50);tick=false});tick=true}});
+  var mt=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
+  mt.addEventListener('click',function(){var o=nl.classList.toggle('open');mt.setAttribute('aria-expanded',o?'true':'false')});
+  nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+  if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.animate').forEach(function(el){obs.observe(el)})}else{document.querySelectorAll('.animate').forEach(function(el){el.classList.add('visible')})}
+})();
+</script>
+</body>
+</html>
